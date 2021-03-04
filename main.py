@@ -23,7 +23,7 @@ async def on_message(message):
 
   if message.content.startswith('$hello'):
     quote = get_quote()
-    await message.channel.send('Meka Leka Hi Meka Hiney Ho!' + quote)
+    await message.channel.send(quote)
 
 client.run(os.getenv('TOKEN'))
 

@@ -6,7 +6,10 @@ import json
 client = discord.Client()
 
 def get_quote():
-  response = request.get("")
+  response = request.get("https://zenquotes.io/api/random")
+  json_data = json.loads(respons.text)
+  quote = json_data[0]['q'] + " -" + json_data[0]['a']
+  return(quit)
 
 @client.event
 async def on_ready():
